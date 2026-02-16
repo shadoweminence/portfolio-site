@@ -2,6 +2,7 @@ import { useState } from "react";
 import { IoLogoGithub } from "react-icons/io";
 import { LuLinkedin } from "react-icons/lu";
 import { MdMailOutline } from "react-icons/md";
+import emailjs from "@emailjs/browser";
 
 export const useContact = () => {
   const [name, setName] = useState("");
@@ -46,27 +47,41 @@ export const useContact = () => {
     if (id === 3) navigateGithub();
   };
 
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = {
-      name,
-      email,
-      message,
-    };
+    if (!name || !email || !message) {
+      alert("Please fill in all fields");
+      return;
+    }
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    setLoading(true);
 
-    const data = await res.json();
-    if (data.success) {
-      alert("Message sent successfully");
-    } else {
-      alert("Message failed to send");
+    try {
+      const templateParams = {
+        from_name: name,
+        from_email: email,
+        message: message,
+        to_name: "Prashant Pokhrel",
+      };
+
+      await emailjs.send(
+        "service_91tmmhw", // Replace with your Service ID
+        "template_rwuu1tu", // Replace with your Template ID
+        templateParams,
+        "gO4WqeJuSXP_EwPYD", // Replace with your Public Key
+      );
+
+      alert("Message sent successfully!");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      alert("Failed to send message. Please try again or email me directly.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -80,5 +95,6 @@ export const useContact = () => {
     setName,
     setEmail,
     setMessage,
+    loading,
   };
 };

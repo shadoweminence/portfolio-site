@@ -1,8 +1,8 @@
 "use client";
 
 import { IoIosRadioButtonOff } from "react-icons/io";
-import { useContact } from "@/reusable/useContact";
 import { useAbout } from "@/reusable/useAbout";
+import { useContact } from "@/reusable/useContact";
 
 export default function Contact() {
   const {
@@ -15,6 +15,7 @@ export default function Contact() {
     setName,
     setEmail,
     setMessage,
+    loading,
   } = useContact();
 
   const { available } = useAbout();
@@ -130,9 +131,10 @@ export default function Contact() {
           </div>
           <button
             type="submit"
-            className="w-full bg-header hover:opacity-90 transition-opacity p-4 rounded-full text-background font-semibold"
+            disabled={loading}
+            className="w-full bg-header hover:opacity-90 transition-opacity p-4 rounded-full text-background font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Send Message
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>
