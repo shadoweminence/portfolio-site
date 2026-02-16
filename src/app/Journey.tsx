@@ -16,7 +16,7 @@ const Journey = () => {
       company: "Truenary Solutions",
       duration: "Apr 2025 - Present",
       description:
-        "Developed projects like &apos;Mero Style&apos; and &apos;Nyauli for the company. Maintained documents and reviewed PRs.",
+        "Developed projects like 'Mero Style' and 'Nyauli' for the company. Maintained documents and reviewed PRs.",
     },
   ];
   return (
