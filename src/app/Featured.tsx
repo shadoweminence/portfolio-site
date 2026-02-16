@@ -27,7 +27,7 @@ const Featured = () => {
     },
     {
       id: 2,
-      name: "Mero-Store (admin-side) ",
+      name: "Mero-Store ",
       description:
         "Mero-Store is a SaaS platform for online stores. It helps users to create their own store and then manage their products, orders, customers, and more.",
       img: "/merostylee.png",
@@ -47,7 +47,7 @@ const Featured = () => {
     },
     {
       id: 3,
-      name: "Nyauli (admin-side) ",
+      name: "Nyauli",
       description:
         "Nyauli is a SaaS platform for restaurants. Here users can regsiter their restaurants and then create a dynamic store of their branch where clients can  browse the menu, order and pay.",
       img: "/nyauli.jpeg",
