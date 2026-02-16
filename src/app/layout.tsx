@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pokhrel Prashant",
-  description: "Personal site of Prashant Pokhrel",
+  title: "Prashant Pokhrel",
+  description: "Portfolio site of Prashant Pokhrel",
 };
 
 export default function RootLayout({
@@ -26,13 +26,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-     
       <body
         className={`scroll-smooth ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-         <Navbar/>
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

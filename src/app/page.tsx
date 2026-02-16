@@ -1,20 +1,20 @@
-import Greeting from "./Greeting";
 import About from "./About";
 import Hero from "./Hero";
 import Skills from "./Skills";
-import Portfolio from "./Portfolio";
-import Projects from "./Projects";
+import Featured from "./Featured";
+import Journey from "./Journey";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 export default function Home() {
-
   return (
     <div className="flex flex-col ">
-   <Hero/>
-    <Greeting/>
-    <About/>
-    <Skills/>
-    <Portfolio/>
-    <Projects/>
+      <Hero />
+      <Featured />
+      <Skills />
+      <Journey />
+      <About />
+      <Contact />
     </div>
   );
 }
