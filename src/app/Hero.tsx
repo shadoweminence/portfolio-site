@@ -18,8 +18,8 @@ export default function Hero() {
             Building <span className="text-primary">Digital</span> Experiences
           </h1>
           <p className="text-xl md:text-3xl text-header mt-5">
-            I'm Prashant Pokhrel, a creative developer crafting scalable web
-            applications with clean architecture and thoughtful design.
+            I&apos;m Prashant Pokhrel, a creative developer crafting scalable
+            web applications with clean architecture and thoughtful design.
           </p>
         </div>
 

@@ -4,7 +4,6 @@ import Skills from "./Skills";
 import Featured from "./Featured";
 import Journey from "./Journey";
 import Contact from "./Contact";
-import Footer from "./Footer";
 
 export default function Home() {
   return (

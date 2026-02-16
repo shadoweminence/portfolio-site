@@ -1,10 +1,6 @@
 "use client";
 import React from "react";
-import { GiCoffeeCup } from "react-icons/gi";
-import { GoBook } from "react-icons/go";
-import { IoIosRadioButtonOff, IoIosRadioButtonOn } from "react-icons/io";
-import { MdElectricBolt } from "react-icons/md";
-import { SiFuturelearn } from "react-icons/si";
+import { IoIosRadioButtonOff } from "react-icons/io";
 import { useAbout } from "@/reusable/useAbout";
 
 const About = () => {
@@ -25,9 +21,9 @@ const About = () => {
 
         <div className="space-y-4 text-sm md:text-base leading-relaxed">
           <p>
-            I'm a developer who believes that great code is not just
-            functional—it's elegant, maintainable, and built with the end user
-            in mind. My journey in tech started with a curiosity about how
+            I&apos;m a developer who believes that great code is not just
+            functional, it&apos;s elegant, maintainable, and built with the end
+            user in mind. My journey in tech started with a curiosity about how
             things work and evolved into a passion for building products that
             people love.
           </p>
@@ -36,10 +32,10 @@ const About = () => {
             {Number(years) >= 1
               ? `${years.toFixed(1)} ${years > 1 ? "years" : "year"}`
               : `${Number(years * 12).toFixed(0)} ${years * 12 > 1 ? "months" : "month"}`}{" "}
-            of experience, I've worked with established companies and made some
-            projects of my own too. I specialize in building systems that are
-            both technically sound and user-focused, bridging the gap between
-            engineering excellence and user needs.
+            of experience, I&apos;ve worked with established companies and made
+            some projects of my own too. I specialize in building systems that
+            are both technically sound and user-focused, bridging the gap
+            between engineering excellence and user needs.
           </p>
         </div>
         <hr className="border-header/10" />
@@ -60,9 +56,9 @@ const About = () => {
         <div className="border border-header/20 p-6 md:p-8 rounded-2xl">
           <h4 className="text-xl md:text-2xl text-header ">Philosophy</h4>
           <p className="mt-4 text-sm md:text-base font-light italic">
-            "Clean code, thoughtful architecture, and user-centric design are
-            not optional—they're the foundation of products that stand the test
-            of time."
+            &apos;Clean code, thoughtful architecture, and user-centric design
+            are not optional—they&apos;re the foundation of products that stand
+            the test of time.&apos;
           </p>
         </div>
         <div className="grid grid-cols-2 gap-4 mt-6">

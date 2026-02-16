@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  IoIosMail,
-  IoIosRadioButtonOff,
-  IoIosRadioButtonOn,
-} from "react-icons/io";
+import { IoIosRadioButtonOff } from "react-icons/io";
 import { useContact } from "@/reusable/useContact";
 import { useAbout } from "@/reusable/useAbout";
 
@@ -33,12 +29,12 @@ export default function Contact() {
           Contact
         </h2>
         <div>
-          <p className="text-header text-3xl md:text-5xl ">Let's Build</p>
+          <p className="text-header text-3xl md:text-5xl ">Let&apos;s Build</p>
           <p className="text-primary text-3xl md:text-5xl ">Something Great</p>
         </div>
         <p className="font-light text-sm md:text-base">
-          Have a project in mind or want to discuss opportunities? I'm always
-          interested in hearing about new challenges and collaborations.
+          Have a project in mind or want to discuss opportunities? I&apos;m
+          always interested in hearing about new challenges and collaborations.
         </p>
         <div className="space-y-4">
           {contacts.map((contact) => (
