@@ -43,8 +43,8 @@ export default function Hero() {
           className="rounded-3xl"
           src="/myPic.jpg"
           alt="Prashant Pokhrel"
-          width={200}
-          height={200}
+          width={400}
+          height={400}
           priority
           unoptimized
         />

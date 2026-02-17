@@ -57,7 +57,7 @@ const About = () => {
           <h4 className="text-xl md:text-2xl text-header ">Philosophy</h4>
           <p className="mt-4 text-sm md:text-base font-light italic">
             &apos;Clean code, thoughtful architecture, and user-centric design
-            are not optional—they&apos;re the foundation of products that stand
+            are not optional. They&apos;re the foundation of products that stand
             the test of time.&apos;
           </p>
         </div>
