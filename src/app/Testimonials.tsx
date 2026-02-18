@@ -32,11 +32,11 @@ const Testimonials = () => {
         </button>
       </div>
 
-      <div className="flex w-full overflow-x-auto gap-6 mt-20 pb-8 hide-scroll snap-x snap-mandatory">
+      <div className="flex max-w-[90vw] w-full overflow-x-auto gap-6 mt-20 pb-8 hide-scroll snap-x snap-mandatory">
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.id}
-            className="flex-none w-[320px] md:w-[380px] flex flex-col gap-4 border border-primary/20 rounded-2xl p-6 bg-primary/5 snap-center hover:border-primary/40 transition-colors"
+            className="flex-none max-w-[90vw] w-[320px] md:w-[380px] flex flex-col gap-4 border border-primary/20 rounded-2xl p-6 bg-primary/5 snap-center hover:border-primary/40 transition-colors"
           >
             <div className="flex items-center gap-1.25">
               {Array.from({ length: 5 }).map((_, index) => (
