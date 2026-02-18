@@ -10,7 +10,7 @@ export interface Testimonial {
   company: string;
   message: string;
   rating: number;
-  createdAt: any;
+  createdAt: string;
 }
 
 export const useTestimonials = () => {

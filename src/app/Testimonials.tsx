@@ -32,29 +32,44 @@ const Testimonials = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-20">
+      <div className="flex w-full overflow-x-auto gap-6 mt-20 pb-8 hide-scroll snap-x snap-mandatory">
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.id}
-            className=" flex flex-col gap-3 border rounded-xl p-6"
+            className="flex-none w-[320px] md:w-[380px] flex flex-col gap-4 border border-primary/20 rounded-2xl p-6 bg-primary/5 snap-center hover:border-primary/40 transition-colors"
           >
-            <div className="flex items-center gap-2">
-              {Array.from({ length: testimonial.rating }).map((_, index) => (
-                <IoIosStar key={index} className="text-yellow-500" />
+            <div className="flex items-center gap-1.25">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <IoIosStar
+                  key={index}
+                  className={`${
+                    index < testimonial.rating
+                      ? "text-yellow-500"
+                      : "text-primary/20"
+                  } size-5`}
+                />
               ))}
             </div>
-            <p className="text-primary min-h-[100px]">{testimonial.message}</p>
-            <hr />
-            <div className="flex items-center gap-2">
-              <div className="border w-12 h-12 rounded-full flex items-center justify-center">
+            <p className="text-primary italic line-clamp-4 min-h-[100px] leading-relaxed">
+              "{testimonial.message}"
+            </p>
+            <div className="mt-auto pt-4 border-t border-primary/10 flex items-center gap-3">
+              <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center bg-header text-background font-bold text-sm">
                 {testimonial.name
-                  .split(" ")
-                  .map((name) => name[0].toUpperCase())
-                  .join("")}
+                  ? testimonial.name
+                      .split(" ")
+                      .filter((n) => n.length > 0)
+                      .map((name) => name[0].toUpperCase())
+                      .join("")
+                  : "?"}
               </div>
-              <div className="flex flex-col ">
-                <span className="text-header">{testimonial.name}</span>
-                <span className="text-primary">{testimonial?.company}</span>
+              <div className="flex flex-col min-w-0">
+                <span className="text-header font-semibold truncate leading-tight">
+                  {testimonial.name}
+                </span>
+                <span className="text-primary text-sm truncate">
+                  {testimonial?.company}
+                </span>
               </div>
             </div>
           </div>
