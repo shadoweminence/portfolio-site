@@ -51,7 +51,7 @@ const Testimonials = () => {
               ))}
             </div>
             <p className="text-primary italic line-clamp-4 min-h-[100px] leading-relaxed">
-              "{testimonial.message}"
+              &quot;{testimonial.message}&quot;
             </p>
             <div className="mt-auto pt-4 border-t border-primary/10 flex items-center gap-3">
               <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center bg-header text-background font-bold text-sm">
