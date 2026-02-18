@@ -17,7 +17,7 @@ const Testimonials = () => {
     >
       <div className="flex flex-col items-center gap-2">
         <LuMessageSquare className="text-primary" size={40} />
-        <h1 className="text-3xl md:text-5xl">Happy Clients</h1>
+        <h1 className="text-3xl md:text-5xl">Testimonials</h1>
         <p className="text-primary">
           Real feedback from people I have worked with. Share yours too.
         </p>
