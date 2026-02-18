@@ -41,7 +41,7 @@ export default function Hero() {
       <div className=" md:block hidden flex-shrink-0">
         <Image
           className="rounded-3xl"
-          src="/myPic.jpg"
+          src="/myPic.png"
           alt="Prashant Pokhrel"
           width={400}
           height={400}
