@@ -4,6 +4,7 @@ import Skills from "./Skills";
 import Featured from "./Featured";
 import Journey from "./Journey";
 import Contact from "./Contact";
+import Testimonials from "./Testimonials";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Skills />
       <Journey />
       <About />
+      <Testimonials />
       <Contact />
     </div>
   );
